@@ -2,20 +2,20 @@
 pub mod sequence_detect {
 
     #[derive(Debug)] // Allows printing of structs and such
-    pub struct SequenceMatch<'a> { // <'a> is a bit like generics in C#, it pass in the lifetime on struct initialisation (I *think*)
+    pub struct SequenceDetect<'a> { // <'a> is a bit like generics in C#, it pass in the lifetime on struct initialisation (I *think*)
     	pub sequence: &'a[u8], // is the array of elements to find in sequence
     	pub match_count: u8 // Unsigned as cannot be negative
     }
 
-    impl<'a> SequenceMatch<'a> {
+    impl<'a> SequenceDetect<'a> {
 
     	//----------------------------------------------------
     	// Constructors
     	//----------------------------------------------------
 
-        /// Instantiates a new SequenceMatch object from a given array of elements
-    	pub fn new(sequence: &[u8]) -> SequenceMatch {
-    		return SequenceMatch{
+        /// Instantiates a new SequenceDetect object from a given array of elements
+    	pub fn new(sequence: &[u8]) -> SequenceDetect {
+    		return SequenceDetect{
     			sequence: sequence,
     			match_count: 0
     		};
