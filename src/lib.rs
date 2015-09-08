@@ -1,5 +1,5 @@
 /// For detecting patterns on io streams (on each individual element);
-pub mod sequence_match {
+pub mod sequence_detect {
 
     #[derive(Debug)] // Allows printing of structs and such
     pub struct SequenceMatch<'a> { // <'a> is a bit like generics in C#, it pass in the lifetime on struct initialisation (I *think*)
