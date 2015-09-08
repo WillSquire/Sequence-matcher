@@ -1,1 +1,1 @@
-# Sequence-matcher
+# Sequence-detect
