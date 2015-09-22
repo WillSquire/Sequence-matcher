@@ -5,7 +5,7 @@ mod sequence_detector;
 
 
 //----------------------------------------------------------------
-// SequenceCounter
+// SequenceMatch
 //----------------------------------------------------------------
 
 #[derive(Debug)]
@@ -32,8 +32,10 @@ impl SequenceCounter {
 // Element Matcher
 //----------------------------------------------------------------
 
-// Note: This is not an optimisation, keeping track of all of these
-// require several array adjustments each time
+// Note: This is not an optimisation, because it needs to keep track of all of these
+// sequence's next elements, going through an array checking if they have been added
+// to it or not, doing more comparisions that just evaluting each one before grouping
+// them.
 
 /**
  * Element Matcher
